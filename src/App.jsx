@@ -29,7 +29,9 @@ function App() {
     setDate("");
   };
 
-  const onDelete = () => {};
+  const onDelete = (id) => {
+    console.log(id);
+  };
   const getSumOfExpenses = () => {
     let total = 0;
     amountArr.map((eachItem) => {
@@ -84,18 +86,20 @@ function App() {
             <p>{eachItem.amount}</p>
             <p>{eachItem.description}</p>
             <div>
-              <button type="button" className="edit-btn" onClick={(id) => {}}>
+              <button
+                type="button"
+                className="edit-btn"
+                onClick={(key) => {
+                  console.log(key);
+                }}
+              >
                 Edit
               </button>
               <button
                 type="button"
                 className="delete-btn"
                 onClick={(id) => {
-                  // const newDetails = amountArr.filter(
-                  //   (eachItem) => eachItem.id != id
-                  // );
-                  onDelete(id);
-                  // console.log(id);
+                  console.log(id);
                 }}
               >
                 Delete
